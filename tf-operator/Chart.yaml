@@ -1,0 +1,13 @@
+apiVersion: v1
+name: tf-operator
+description: Helm chart for tf-operator
+version: 0.1.0
+keywords:
+  - Tungsten
+  - Tungsten Fabric
+  - TungstenFabric
+  - SDN
+  - CNI
+  - ATS
+  - Atsgen
+  - AtsgenTungsten
