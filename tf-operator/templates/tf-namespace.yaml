@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ .Values.namespace }}
+  labels:
+    name: atsgen
+    openshift.io/run-level: "0"
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/description: "ATSgen Tungsten Fabric Operator components"
