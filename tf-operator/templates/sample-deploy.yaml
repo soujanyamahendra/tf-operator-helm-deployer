@@ -6,11 +6,11 @@ spec:
   cniConfig:
     clusterName: k8s
     ipFabricNetwork:
-      cidr: 10.64.0.0/12
+      cidr: {{ .Values.networking.ipFabricSubnet }}
     podNetwork:
-      cidr: 10.32.0.0/12
+      cidr: {{ .Values.networking.podSubnet }}
     serviceNetwork:
-      cidr: 10.96.0.0/12
+      cidr: {{ .Values.networking.serviceSubnet }}
     ipForwarding: snat
     useHostNewtorkService: true
   datapathConfig:

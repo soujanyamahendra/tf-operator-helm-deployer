@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tf-operator
-  namespace: {{ .Values.namespace }}
+  namespace: atsgen
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,7 @@ spec:
         name: tf-operator
     spec:
       hostNetwork: true
-      serviceAccountName: {{ .Values.serviceAccount }}
+      serviceAccountName: tf-operator
       containers:
         - name: tf-operator
           image: {{ .Values.global.images.tags.tf_operator }}

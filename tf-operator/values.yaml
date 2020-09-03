@@ -1,12 +1,6 @@
 global:
-  namespace: atsgen
-  serviceAccount: tf-operator
-  clusterRole: tf-operator
-  clusterRoleBinding: tf-operator
   images:
     tags:
-      # You can override container names here using container name as a tag. Just replace '-' in container name to '_'. See example:
-      #   contrail_external_kafka: "docker.io/opencontrailnightly/contrail-external-kafka:master-latest"
       tf_operator: atsgen/tf-operator:v0.0.1
     imagePullPolicy: "IfNotPresent"
     # Specify imageCredentials
@@ -14,3 +8,9 @@ global:
       # registry: quay.io
       # username: username
       # password: password
+  contrail_env:
+    CONTAIN45ER_REGISTRY: docker.io/opencontrailnig 
+networking:
+  ipFabricSubnet: 10.64.0.0/12
+  podSubnet: 192.168.0.0/16
+  serviceSubnet: 10.96.0.0/12
